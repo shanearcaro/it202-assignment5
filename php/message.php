@@ -47,9 +47,15 @@
 ?>
         <?php 
             if ($row['UserID'] == $owner) 
-                echo "<tr class='user-messages'><td><p><span class='owner-chat'><b>" . $ownerName . "</b></span>: " . $row['Message'] . "</p></td></tr>";
-            else 
-                echo "<tr class='user-messages'><td><p><span class='guest-chat'><b>" . $guestName . "</b></span>: " . $row['Message'] . "</p></td></tr>";
+                if ($owner == $userID)
+                    echo "<tr class='user-messages'><td><p><span class='owner-chat'><b>" . "You" . "</b></span>: " . $row['Message'] . "</p></td></tr>";
+                else
+                    echo "<tr class='user-messages'><td><p><span class='owner-chat'><b>" . $ownerName . "</b></span>: " . $row['Message'] . "</p></td></tr>";
+            else
+                if ($guest == $userID)
+                    echo "<tr class='user-messages'><td><p><span class='guest-chat'><b>" . "You" . "</b></span>: " . $row['Message'] . "</p></td></tr>";
+                else
+                    echo "<tr class='user-messages'><td><p><span class='guest-chat'><b>" . $guestName . "</b></span>: " . $row['Message'] . "</p></td></tr>";
             ?>
 <?php 
     endwhile;
