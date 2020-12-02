@@ -2,7 +2,7 @@
 
 ## AJAX Chat Applicaiton
 
-The program allows users to log into their chat accounts and begin talking to other people. I was initially planning on upgrading this project to include the creation of custom accounts with email verification but I will most likely try and create a new chat application uses some Javascript Frameworks.
+The program allows users to log into their chat accounts and begin talking to other people. I was initially planning on upgrading this project to include the creation of custom accounts with email verification but I will most likely try and create a new chat application that uses some Javascript Frameworks.
 
 ## Implemenation
 
